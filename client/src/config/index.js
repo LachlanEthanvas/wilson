@@ -61,8 +61,7 @@ export const addProductFormElements = [
       { id: "men", label: "Men" },
       { id: "women", label: "Women" },
       { id: "kids", label: "Kids" },
-      { id: "accessories", label: "Accessories" },
-      { id: "footwear", label: "Footwear" },
+
     ],
   },
   {
@@ -70,12 +69,26 @@ export const addProductFormElements = [
     name: "brand",
     componentType: "select",
     options: [
-      { id: "nike", label: "Nike" },
-      { id: "adidas", label: "Adidas" },
+      { id: "suit", label: "suit" },
+      { id: "tshirt", label: "tshirt" },
+      { id: "jeans", label: "jeans" },
       { id: "puma", label: "Puma" },
       { id: "levi", label: "Levi's" },
-      { id: "zara", label: "Zara" },
-      { id: "h&m", label: "H&M" },
+     
+    ],
+  },
+/*size*/
+  {
+    label: "size",
+    name: "size",
+    componentType: "select",
+    options: [
+      { id: "28", label: "28" },
+      { id: "30", label: "30" },
+      { id: "32", label: "32" },
+      { id: "34", label: "34" },
+      { id: "40", label: "40" },
+     
     ],
   },
   {
@@ -127,16 +140,7 @@ export const shoppingViewHeaderMenuItems = [
     label: "Kids",
     path: "/shop/listing",
   },
-  {
-    id: "footwear",
-    label: "Footwear",
-    path: "/shop/listing",
-  },
-  {
-    id: "accessories",
-    label: "Accessories",
-    path: "/shop/listing",
-  },
+  
   {
     id: "search",
     label: "Search",
@@ -148,17 +152,24 @@ export const categoryOptionsMap = {
   men: "Men",
   women: "Women",
   kids: "Kids",
-  accessories: "Accessories",
-  footwear: "Footwear",
+  
 };
 
 export const brandOptionsMap = {
-  nike: "Nike",
-  adidas: "Adidas",
+  suit:"suit",
+  tshirt: "tshirt",
+  jeans: "jeans",
   puma: "Puma",
   levi: "Levi",
-  zara: "Zara",
-  "h&m": "H&M",
+ 
+};
+export const sizeOptionsMap = {
+  28:"28",
+  30: "30",
+  32: "32",
+  40: "40",
+  42: "42",
+ 
 };
 
 export const filterOptions = {
@@ -166,16 +177,23 @@ export const filterOptions = {
     { id: "men", label: "Men" },
     { id: "women", label: "Women" },
     { id: "kids", label: "Kids" },
-    { id: "accessories", label: "Accessories" },
-    { id: "footwear", label: "Footwear" },
+    
   ],
   brand: [
-    { id: "nike", label: "Nike" },
-    { id: "adidas", label: "Adidas" },
+    { id: "suit", label: "Suit" },
+    { id: "tshirt", label: "tshirt" },
+    { id: "jeans", label: "jeans" },
     { id: "puma", label: "Puma" },
     { id: "levi", label: "Levi's" },
-    { id: "zara", label: "Zara" },
-    { id: "h&m", label: "H&M" },
+   
+  ],
+  size: [
+    { id: "28", label: "28" },
+    { id: "30", label: "30" },
+    { id: "32", label: "32" },
+    { id: "34", label: "34" },
+    { id: "40", label: "40" },
+   
   ],
 };
 

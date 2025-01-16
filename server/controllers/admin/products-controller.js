@@ -32,6 +32,7 @@ const addProduct = async (req, res) => {
       price,
       salePrice,
       totalStock,
+      size,
       averageReview,
     } = req.body;
 
@@ -46,6 +47,7 @@ const addProduct = async (req, res) => {
       price,
       salePrice,
       totalStock,
+      size,
       averageReview,
     });
 
@@ -93,6 +95,7 @@ const editProduct = async (req, res) => {
       brand,
       price,
       salePrice,
+      size,
       totalStock,
       averageReview,
     } = req.body;
@@ -114,6 +117,7 @@ const editProduct = async (req, res) => {
     findProduct.totalStock = totalStock || findProduct.totalStock;
     findProduct.image = image || findProduct.image;
     findProduct.averageReview = averageReview || findProduct.averageReview;
+    findProduct.size = size || findProduct.size;
 
     await findProduct.save();
     res.status(200).json({

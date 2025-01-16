@@ -51,6 +51,7 @@ function ShoppingListing() {
   const { toast } = useToast();
 
   const categorySearchParam = searchParams.get("category");
+  
 
   function handleSort(value) {
     setSort(value);
