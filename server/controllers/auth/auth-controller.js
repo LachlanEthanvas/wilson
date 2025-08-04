@@ -106,7 +106,7 @@ const authMiddleware = async (req, res, next) => {
     });
 
   try {
-    const decoded = jwt.verify(token, "CLIENT_SECRET_KEY");
+    const decoded = jwt.verify(token, process.env.JWT_SECRET_KEY); // ✅ Fix here
     req.user = decoded;
     next();
   } catch (error) {
@@ -116,5 +116,6 @@ const authMiddleware = async (req, res, next) => {
     });
   }
 };
+
 
 module.exports = { registerUser, loginUser, logoutUser, authMiddleware };
