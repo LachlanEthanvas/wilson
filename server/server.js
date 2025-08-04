@@ -24,8 +24,8 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 mongoose
   .connect(process.env.MONGO_URI)
-  .then(() => console.log("MongoDB connected"))
-  .catch((error) => console.log(error));
+  .then(() => console.log("MongoDB connected")).catch((e) => console.log(e))
+  .catch(() => console.log("Database not connected"));
 
 app.use(
   cors({
