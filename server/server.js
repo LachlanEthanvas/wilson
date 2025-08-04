@@ -29,7 +29,9 @@ mongoose
 
 app.use(
   cors({
-    origin: ["http://localhost:5173", "https://poetic-marzipan-d2eb12.netlify.app"],
+    origin: [
+      "http://localhost:5173","https://wilson-shop-project.netlify.app" // ✅ This is your correct Netlify frontend
+    ],
     methods: ["GET", "POST", "DELETE", "PUT"],
     allowedHeaders: [
       "Content-Type",
